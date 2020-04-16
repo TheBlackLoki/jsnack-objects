@@ -23,3 +23,33 @@ $("#invia").click(function () {
     $("#pesoPalla").val("")
   }
 })
+// Creare un array di oggetti: ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. Stampare a schermo la bici con peso minore.
+
+
+var bicicletta =
+[
+  {
+    "nome" : "Pantani",
+    "peso" : 30
+  },
+  {
+    "nome" : "Cipollini",
+    "peso" : 22
+  },
+  {
+    "nome" : "Bartali",
+    "peso" : 60
+  }
+]
+var controllo = bicicletta[0].peso + 1
+console.log(controllo);
+for (var i = 0; i < bicicletta.length; i++) {
+  var pesoFinale = bicicletta[i].peso
+  if (controllo > pesoFinale) {
+    controllo = pesoFinale
+    var oggettoWinner = bicicletta[i]
+    console.log(bicicletta[i]);
+  }
+  console.log(oggettoWinner);
+}
+$(".biciclette").append("<p>" + oggettoWinner.nome + "</p>")
